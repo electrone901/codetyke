@@ -1,24 +1,26 @@
 @import '../../styles/utils/colors';
 @import '../../styles/utils/mixins';
 @import '../../styles/utils/breakpoints';
-
 .learningModule {
     &--header {
         text-align: center;
+        @media only screen and (max-width: $mobile) {
+            text-align: left;
+        }
     }
-
     &--title {
         margin: 25px 10px;
         color: $morning-sky;
         font-weight: 600;
         font-size: 1.5em;
     }
-
-    &--subHeader{
+    &--subHeader {
         @include subheader;
         min-height: 42px;
+        @media only screen and (max-width: $mobile) {
+            display: none;
+        }
     }
-  
     &--answerArea {
         background-color: white;
         box-shadow: 0px 0px 20px -15px;
@@ -29,20 +31,23 @@
         @media only screen and (max-width: $tablet) {
             border-radius: unset;
         }
-
     }
-
-    &--selections{ 
+    &--selections {
         padding: 30px 0;
         display: grid;
         grid-auto-flow: column;
         grid-gap: 10px;
+        @media only screen and (max-width: $tablet) {
+            grid-template-rows: repeat(2, 1fr);
+        }
     }
-
     &--submitButtonContainer {
         height: 50px;
         .submitButton {
             float: right;
+            @media only screen and (max-width: $mobile) {
+                width: 80%;
+            }
         }
     }
 }

@@ -3,11 +3,14 @@ import SelectionBox from '../selectionBox/SelectionBox';
 import Button from '../button/Button';
 
 import './Styles.scss';
+import { Component } from 'react';
 
 const LearningModule = ({setGameStatus}) => {
   const [currentQuestionId, setCurrentQuestionId] = React.useState(0);
   const [quizData, setQuizData] = React.useState({});
   let currentQuestion = quizData.questionArr ? quizData.questionArr[currentQuestionId]: {};
+  
+  // ComponentDidMount
   React.useEffect(()=>{
     getQuizData();
   },[]);

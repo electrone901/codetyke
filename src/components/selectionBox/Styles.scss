@@ -1,6 +1,5 @@
 @import '../../styles/utils/colors';
-
-.selectionBox{
+.selectionBox {
     position: relative;
     width: 160px;
     overflow: hidden;
@@ -10,7 +9,17 @@
     border: solid 1px $elephant-paw;
     border-radius: 5px;
     text-align: center;
-    &--image {display: block; width: inherit; padding-bottom: 8px;  }
-    &--text {font-size: 1em; font-weight: 600;}
-    input { position: absolute; left: 4px;}
-  }
+    &--image {
+        display: block;
+        width: inherit;
+        padding-bottom: 8px;
+    }
+    &--text {
+        font-size: 1em;
+        font-weight: 600;
+    }
+    input {
+        position: absolute;
+        left: 4px;
+    }
+}
